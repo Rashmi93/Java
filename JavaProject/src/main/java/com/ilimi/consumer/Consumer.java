@@ -27,8 +27,8 @@ public class Consumer implements Runnable {
 	public void run() {
 		while (true) {
 			try {
-				// System.out.println("Consumed by consumer: " + consumer + " :
-				// " + sharedQueue.take());
+				System.out.println("Consumed by consumer: " + consumer + " :
+				 " + sharedQueue.take());
 				JsonPojo item = sharedQueue.take();
 				ObjectMapper mapper = new ObjectMapper();
 				String str = mapper.writeValueAsString(item);
